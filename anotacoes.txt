@@ -39,6 +39,8 @@
 
   Python select interpreter
 
+  strip() - valida campos em branco
+
   --- ATALHOS ---
 
   Ctrl + J - Abre o terminal
@@ -52,3 +54,4 @@
   receitas = Receita.objects.filter(publicada=True) - WHERE
   receitas = Receita.objects.order_by('-data_receita').filter(publicada=True) - ORDER BY
   lista_receitas = Receita.objects.filter(nome_receita__icontains=nome_a_buscar) - BUSCA
+nome = User.objects.filter(email= email).values_list('username', flat=TRUE).get()
