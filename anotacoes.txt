@@ -55,3 +55,29 @@
   receitas = Receita.objects.order_by('-data_receita').filter(publicada=True) - ORDER BY
   lista_receitas = Receita.objects.filter(nome_receita__icontains=nome_a_buscar) - BUSCA
 nome = User.objects.filter(email= email).values_list('username', flat=TRUE).get()
+
+--- DELETAR APP ---
+
+remover ele do settings
+tirar das migrações se tiver
+TIRAR TODOS OS VINCULOS INCLUSIVE NOS TEMPLATES, VIEWS
+
+apagar a tabela
+- se n conseguir
+Another way: type "services.msc" in run popup(windows + R). This will show all services running Select Postgres service from list and click on start/stop/restart
+
+Paginação
+
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
+
+paginator = Paginator(receitas, 3)
+
+
+MUDAR OS APPS PARA PASTA APP
+
+PROJECT_ROOT = os.path.dirname(__file__)
+sys.path.insert(0, os.path.join(PROJECT_ROOT, '../apps'))
+
+---- DOCSTRING ----
+
+MUITO IMPORTANTE PARA ESPECIFICAR OS MÉTODOS
