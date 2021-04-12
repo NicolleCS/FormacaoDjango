@@ -73,7 +73,7 @@ from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 paginator = Paginator(receitas, 3)
 
 
-MUDAR OS APPS PARA PASTA APP
+-- MUDAR OS APPS PARA PASTA APP --
 
 PROJECT_ROOT = os.path.dirname(__file__)
 sys.path.insert(0, os.path.join(PROJECT_ROOT, '../apps'))
@@ -81,3 +81,14 @@ sys.path.insert(0, os.path.join(PROJECT_ROOT, '../apps'))
 ---- DOCSTRING ----
 
 MUITO IMPORTANTE PARA ESPECIFICAR OS MÉTODOS
+
+---- SETTINGS ----
+
+LANGUAGE_CODE = 'pt-br'
+TIME_ZONE = 'America/Sao_Paulo'
+
+
+'DIRS': [os.path.join(BASE_DIR, 'templates')],
+
+
+tempus dominus django - calendario
